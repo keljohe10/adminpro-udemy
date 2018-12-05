@@ -9,13 +9,15 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     NopagefoundComponent,
     HeaderComponent,
     SidebarComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    NopagefoundComponent
   ],
   exports: [
     NopagefoundComponent,
     HeaderComponent,
     SidebarComponent,
     BreadcrumbsComponent,
+    NopagefoundComponent
   ]
 })
 export class SharedModule { }
