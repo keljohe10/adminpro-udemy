@@ -1,3 +1,4 @@
+import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
        { path: 'dashboard', component: DashboardComponent },
        { path: 'progress', component: ProgressComponent },
        { path: 'graficas1', component: Graficas1Component },
+       { path: 'accout-settings', component: AccoutSettingsComponent },
        { path: '', redirectTo: '/dashboard', pathMatch: 'full'}
     ]
    }

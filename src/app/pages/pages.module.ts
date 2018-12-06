@@ -10,6 +10,7 @@ import { PAGES_ROUTES } from './pages.routes';
 import { ChartsModule } from 'ng2-charts';
 // Temporal
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
     ProgressComponent,
     Graficas1Component,
     IncrementadorComponent,
-    GraficoComponent
+    GraficoComponent,
+    AccoutSettingsComponent
 
   ],
   exports: [
