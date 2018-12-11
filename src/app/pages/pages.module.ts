@@ -11,6 +11,8 @@ import { ChartsModule } from 'ng2-charts';
 // Temporal
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
@@ -21,13 +23,20 @@ import { AccoutSettingsComponent } from './accout-settings/accout-settings.compo
     Graficas1Component,
     IncrementadorComponent,
     GraficoComponent,
-    AccoutSettingsComponent
+    AccoutSettingsComponent,
+    PromesasComponent,
+    RxjsComponent
 
   ],
   exports: [
     DashboardComponent,
     ProgressComponent,
-    Graficas1Component
+    Graficas1Component,
+    IncrementadorComponent,
+    GraficoComponent,
+    AccoutSettingsComponent,
+    PromesasComponent,
+    RxjsComponent
   ],
   imports: [
     SharedModule,
