@@ -38,4 +38,5 @@ Ajustes: any = {
     this.GuardarInstancia();
   }
 
+
 }

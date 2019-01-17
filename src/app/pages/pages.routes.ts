@@ -1,3 +1,4 @@
+import { LoginGuardGuard } from '../services/service.index';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { NgModule } from '@angular/core';
 import { PromesasComponent } from './promesas/promesas.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
    {
     path: '',
     component: PagesComponent,
+    canActivate: [ LoginGuardGuard],
     children: [
        { path: 'dashboard', component: DashboardComponent, data: {titulo: 'Dashboard'} },
        { path: 'progress', component: ProgressComponent, data: {titulo: 'Progreso'} },
