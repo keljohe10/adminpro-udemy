@@ -1,3 +1,5 @@
+import { PipesModule } from '../pipes/pipes.module';
+import { CommonModule } from '@angular/common';
 import { GraficoComponent } from '../components/grafico/grafico.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -13,6 +15,7 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -25,7 +28,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     GraficoComponent,
     AccoutSettingsComponent,
     PromesasComponent,
-    RxjsComponent
+    RxjsComponent,
+    ProfileComponent
 
   ],
   exports: [
@@ -42,7 +46,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     SharedModule,
     FormsModule,
     ChartsModule,
-    PAGES_ROUTES
+    PAGES_ROUTES,
+    PipesModule,
+    CommonModule
   ],
 })
 export class PagesModule { }

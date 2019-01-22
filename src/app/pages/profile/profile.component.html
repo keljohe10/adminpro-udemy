@@ -1,0 +1,49 @@
+<div class="row animated fadeIn">
+    <div class="col-lg-7">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Perfil de usuario</h4>
+                <h6 class="card-subtitle">Datos basicos</h6>
+                <form ngNativeValidate class="form p-t-20" #f="ngForm" (ngSubmit)="guardar(f.value)">
+                    <div class="form-group">
+                        <label for="exampleInputuname">Nombre de usuario</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input [ngModel]="usuario.nombre" name="nombre" type="text" class="form-control" id="exampleInputuname" placeholder="Username" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email de usuario</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input [ngModel]="usuario.email" [disabled]="usuario.google" name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+                    <i class="fa fa-save"></i> Guardar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="card">
+            <div class="card-body" align="center">
+                <h4 class="card-title">Fotografia de usuario</h4>
+                <h6 class="card-subtitle">Nombre de usuario</h6>
+                <img *ngIf="!imgTemp" [src]="usuario.img | imagen" alt="user" class="w150">
+                <img *ngIf="imgTemp" [src]="imgTemp" alt="user" class="w150">
+
+                <input #searchInput type="file" name="imagen" class="form-control-file" (change)="subirArchivo( $event.target.files[0] )">
+                <br>
+
+                <button type="button" (click)="cambiarImagen()" [disabled]="!archivoSubir" class="btn btn-success btn-block waves-effect waves-light m-r-10">
+                <i class="fa fa-save"></i> Actualizar</button>
+
+            </div>
+        </div>
+
+    </div>
+</div>

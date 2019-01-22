@@ -8,6 +8,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
    {
@@ -21,6 +22,7 @@ const routes: Routes = [
        { path: 'accout-settings', component: AccoutSettingsComponent, data: {titulo: 'Ajustes de tema'} },
        { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'} },
        { path: 'rxjs', component: RxjsComponent, data: {titulo: 'Observables'} },
+       { path: 'perfil', component: ProfileComponent, data: {titulo: 'Perfil'} },
        { path: '', redirectTo: '/dashboard', pathMatch: 'full'}
     ]
    }
