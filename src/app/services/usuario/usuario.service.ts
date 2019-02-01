@@ -98,8 +98,10 @@ constructor(public http: HttpClient, public _router: Router, public _subirArchiv
     return this.http.put( url, usuario)
                 .pipe( map( (resp: any) => {
 
+                if (usuario._id === this.usuario._id) {
                   let usuarioBD: Usuario = resp.usuarios;
-                    this.guardaStorage(usuarioBD._id, this.token, usuarioBD);
+                  this.guardaStorage(usuarioBD._id, this.token, usuarioBD);
+                }
                     swal('Usuario actualizado', usuario.nombre, 'success');
                     return true;
                  })
@@ -116,5 +118,26 @@ constructor(public http: HttpClient, public _router: Router, public _subirArchiv
         .catch( resp => {
           console.log(resp);
         });
+  }
+
+  cargarUsuarios( desde: number = 0) {
+    let url = URL_SERVICIOS + '/usuario?desde=' + desde;
+    return this.http.get( url);
+  }
+
+  buscarUsuario( termino: string) {
+    let url = URL_SERVICIOS + '/busqueda/coleccion/usuarios/' + termino;
+    return this.http.get(url)
+                .pipe( map( (resp: any) => resp.usuarios) );
+  }
+
+  borrarUsuario( id: string) {
+    let url = URL_SERVICIOS + '/usuario/' + id + '?token=' + this.token;
+    return this.http.delete(url)
+                .pipe( map( resp => {
+                    swal('Usuario borrado', 'El usuario ha sido eliminado correctamente', 'success');
+                    return true;
+                 })
+                );
   }
 }

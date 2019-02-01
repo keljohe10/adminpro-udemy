@@ -38,6 +38,7 @@ imgTemp: string;
     }
     if (archivo.type.indexOf('image') < 0) {
       this.archivoSubir = null;
+      this.searchInput.nativeElement.value = '';
       swal('Solo imagenes', 'El archivo seleccionado no es una imagen', 'error');
       return;
     }

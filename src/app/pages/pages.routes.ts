@@ -1,3 +1,4 @@
+import { UsuariosComponent } from './usuarios/usuarios.component';
 import { LoginGuardGuard } from '../services/service.index';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { NgModule } from '@angular/core';
@@ -23,6 +24,8 @@ const routes: Routes = [
        { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'} },
        { path: 'rxjs', component: RxjsComponent, data: {titulo: 'Observables'} },
        { path: 'perfil', component: ProfileComponent, data: {titulo: 'Perfil'} },
+       // Mantenimiento
+       { path: 'usuarios', component: UsuariosComponent, data: {titulo: 'Mantenimiento de usuarios'} },
        { path: '', redirectTo: '/dashboard', pathMatch: 'full'}
     ]
    }
